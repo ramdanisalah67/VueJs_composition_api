@@ -14,6 +14,11 @@
         </div>
         <div ref="element">this is ref</div>
         <button class="btn btn-light" @click="$event => console.log(element)">check ref</button>
+
+        <div class="childProps mt-4">
+            <p> this is child props  </p>
+            <myChild :myName="name" />
+        </div>
     </div>
     
 </template>
@@ -22,7 +27,7 @@
 <script setup>
 import router from '@/Router';
 import { computed, ref } from 'vue';
-
+import myChild from '@/components/childProps.vue'
     const name = ref("salah-eddine")
     const age = ref(26)
 
